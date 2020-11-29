@@ -1,0 +1,3 @@
+include ':app:simplerecyclerview'
+include ':app'
+rootProject.name = "basicAdapter"
