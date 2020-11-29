@@ -38,6 +38,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         adapterList = MockData.getMockData()
+        setAdapter()
+
+    }
+
+    private fun setAdapter() {
         adapter =
             BaseAdapter(this, R.layout.row_item_main_layout, adapterList) { v, item, position ->
                 val layoutRoot = v!!.findViewById(R.id.layoutRoot) as LinearLayout
@@ -71,7 +76,6 @@ class MainActivity : AppCompatActivity() {
         val decoration = RecyclerViewMargin(6, android.R.attr.numColumns)
         binding.recyclerView.addItemDecoration(decoration)
         binding.recyclerView.adapter = adapter
-
     }
 
 
